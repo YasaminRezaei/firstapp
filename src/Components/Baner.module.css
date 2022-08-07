@@ -1,0 +1,19 @@
+.container{
+    position: relative;
+    
+}
+.container img{
+    width: 100%;
+    height: 40%;
+   
+}
+
+.container p{
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    color:rgb(153, 154, 155);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
