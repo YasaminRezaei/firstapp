@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const UL = styled.ul`
     display: flex;
@@ -12,7 +13,11 @@ const UL = styled.ul`
         color: #EDF5F5;
         font-weight: bold;
     }
-    li:hover{
+    a{
+        color:#EDF5F5;
+        text-decoration:none;
+    }
+    a:hover{
         color:white;
     }
     z-index:15;
@@ -39,11 +44,11 @@ const Navbar = ({open}) => {
     return (
         <header>
                 <UL open={open}>
-                    <li>Products</li>
-                    <li>Fragen</li>
-                    <li>Über uns</li>
-                    <li>Kontakt</li>
-                    <li>Login</li>
+                    <li><Link to="/products">Products</Link></li>
+                    <li><Link to="/">Fragen</Link></li>
+                    <li><Link to="/">Über uns</Link></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link>Login</Link></li>
                 </UL>
 
         </header>

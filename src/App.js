@@ -1,11 +1,11 @@
 import React,{Component} from "react";
 //import Navbar from "./Components/Navbar";
-import Baner from "./Components/Baner";
-import Cards from "./Components/Cards";
-import Search from "./Components/Search";
-import Logos from "./Components/Logos";
 import Footer from "./Components/Footer";
 import Burger from "./Components/Burger";
+import Landing from "./Components/Landing";
+import Products from "./Components/Products";
+import {Route, Switch} from "react-router-dom";
+
 
 
 class App extends Component {
@@ -14,10 +14,11 @@ class App extends Component {
         return (
            <div>
                 <Burger />
-                <Baner />
-                <Cards />
-                <Search />
-                <Logos />
+                <Switch>
+                    <Route path="/products" component={Products}/>
+                    <Route path="/" component={Landing} />
+                </Switch>
+              
                 <Footer />
            </div>
         )

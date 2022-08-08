@@ -33,7 +33,7 @@ class Card extends Component {
                     <h3>{title}</h3>
                         <p>{cost} {counter ? `X ${counter} = ${cost*counter}`: ""} €</p>
                     <div className={styles.counter}>
-                        <img src={down} className={!this.state.counter && styles.deactive } alt="arrow down" onClick={this.downHandler}/>
+                        <img src={down} className={!this.state.counter ? styles.deactive : ""} alt="arrow down" onClick={this.downHandler}/>
                         <span>{counter}</span>
                         <img src={up} alt="arrow down" onClick={this.upHandler}/>
                     </div>
